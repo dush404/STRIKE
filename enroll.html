@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enroll - STRIKE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.png" type="image/png" />
+    <!-- link-for-icon-use -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html"
+            ><img src="logo.png" alt="STRIKE Logo" class="nav-logo"
+          /></a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="courses.html" class="nav-link">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="hackathons.html" class="nav-link">Hackathons</a>
+          </li>
+          <li class="nav-item">
+            <a href="roadmap.html" class="nav-link">Roadmap</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a href="signin.html" class="nav-button">Sign In</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Enrollment Section -->
+    <main>
+      <section class="contact-section">
+        <div class="contact-content">
+          <h1 class="section-title">
+            Enroll at <span class="logo-text">STRIKE</span>
+          </h1>
+          <p class="contact-description">
+            You're one step away from starting your journey. Fill out the form
+            below to enroll in your selected course.
+          </p>
+
+          <form class="contact-form" action="#" method="POST">
+            <!-- Course Selection Dropdown -->
+            <div class="form-group">
+              <select id="course-selection" name="course" required>
+                <option value="" disabled selected>Select a Course...</option>
+                <option value="dsa">
+                  DSA Mastery & Interview Prep - ₹4500
+                </option>
+                <option value="ai">Generative AI Deep Dive - ₹4500</option>
+                <option value="fullstack">
+                  Full-Stack Web Development - ₹3000
+                </option>
+                <option value="datascience">
+                  Python for Data Science - ₹3000
+                </option>
+              </select>
+              <label for="course-selection" class="select-label"
+                >Choose Your Course</label
+              >
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder=" "
+                required
+              />
+              <label for="name">Your Name</label>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="occupation"
+                name="occupation"
+                placeholder=" "
+                required
+              />
+              <label for="occupation">Study or Work</label>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder=" "
+                required
+              />
+              <label for="email">Your Email</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder=" "
+                required
+              />
+              <label for="city">City</label>
+            </div>
+
+            <!-- Payment Options -->
+            <div class="payment-options">
+              <h4 class="payment-title">Payment Method</h4>
+              <div class="payment-grid">
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="card" checked />
+                  <span class="payment-label">Credit/Debit Card</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="upi" />
+                  <span class="payment-label">UPI</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="netbanking" />
+                  <span class="payment-label">Net Banking</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="cta-button">Enroll & Pay</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <!-- Column 1: Logo & About -->
+        <div class="footer-column">
+          <a href="index.html"
+            ><img src="logo.png" alt="STRIKE Logo" class="footer-logo-img"
+          /></a>
+          <p class="footer-about">
+            Bridging the gap between academia and industry with project-based
+            learning.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="hackathons.html">Hackathons</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Legal -->
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Follow Us -->
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <!-- Replace # with your actual social media links -->
+            <a
+              href="https://x.com/dushmanta404?t=JLxS1a13Z8nvXu2m30JFkA&s=09"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-square-x-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/dushmanta-khilari-83727035b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/dush404"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-square-github"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/d.u.s.h.4.0.4?igsh=YnU2MWh6emsxYmU3"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 STRIKE. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        // Get the 'course' parameter value
+        const course = urlParams.get("course");
+
+        // If a course parameter exists, select the corresponding option
+        if (course) {
+          document.getElementById("course-selection").value = course;
+        }
+      });
+    </script>
+  </body>
+</html>

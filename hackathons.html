@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathons - STRIKE</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.png" type="image/png" />
+    <!-- link-for-icon-use -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html"
+            ><img src="logo.png" alt="STRIKE Logo" class="nav-logo"
+          /></a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="courses.html" class="nav-link">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="hackathons.html" class="nav-link">Hackathons</a>
+          </li>
+          <li class="nav-item">
+            <a href="roadmap.html" class="nav-link">Roadmap</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a href="signin.html" class="nav-button">Sign In</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hackathons Section -->
+    <main>
+      <section class="hackathons-section">
+        <div class="hackathons-content">
+          <h1 class="section-title">
+            Join Our <span class="logo-text">Hackathons</span>
+          </h1>
+          <div class="hackathons-grid">
+            <!-- Hackathon 1 -->
+            <div class="hackathon-card">
+              <!-- Toggles for showing/hiding forms -->
+              <input
+                type="radio"
+                name="hackathon-1-toggle"
+                id="h1-participate-toggle"
+                class="hackathon-toggle"
+              />
+              <input
+                type="radio"
+                name="hackathon-1-toggle"
+                id="h1-submit-toggle"
+                class="hackathon-toggle"
+              />
+              <input
+                type="radio"
+                name="hackathon-1-toggle"
+                id="h1-close-toggle"
+                class="hackathon-toggle"
+                checked
+              />
+
+              <h3 class="hackathon-title">AI for Good Challenge</h3>
+              <p class="hackathon-details">
+                Use the power of Generative AI to build solutions for social and
+                environmental challenges. Compete for a $5,000 prize pool and
+                mentorship from AI experts.
+              </p>
+              <div class="hackathon-buttons">
+                <label
+                  for="h1-participate-toggle"
+                  class="hackathon-button participate"
+                  >Participate</label
+                >
+                <label
+                  for="h1-submit-toggle"
+                  class="hackathon-button submission"
+                  >Submit Project</label
+                >
+              </div>
+
+              <!-- Participation Form for Hackathon 1 -->
+              <div class="hackathon-form-container participation-form">
+                <label
+                  for="h1-close-toggle"
+                  class="form-close-btn"
+                  title="Close"
+                  >×</label
+                >
+                <form class="hackathon-action-form">
+                  <h4 class="form-sub-title">
+                    Register for "AI for Good Challenge"
+                  </h4>
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder=" " required />
+                    <label>Your Name</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" placeholder=" " required />
+                    <label>Your Email</label>
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      name="message"
+                      rows="4"
+                      placeholder=" "
+                    ></textarea>
+                    <label>Tell us why you want to participate</label>
+                  </div>
+                  <button type="submit" class="cta-button">Register</button>
+                </form>
+              </div>
+
+              <!-- Project Submission Link for Hackathon 1 -->
+              <div class="hackathon-form-container submission-form">
+                <label
+                  for="h1-close-toggle"
+                  class="form-close-btn"
+                  title="Close"
+                  >×</label
+                >
+                <form class="hackathon-action-form">
+                  <h4 class="form-sub-title">
+                    Submit Project for "AI for Good Challenge"
+                  </h4>
+                  <div class="form-group">
+                    <input
+                      type="url"
+                      name="project-link"
+                      placeholder=" "
+                      required
+                    />
+                    <label>Project Link (GitHub, Demo, etc.)</label>
+                  </div>
+                  <button type="submit" class="cta-button">Submit Link</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Hackathon 2 -->
+            <div class="hackathon-card">
+              <!-- Toggles for showing/hiding forms -->
+              <input
+                type="radio"
+                name="hackathon-2-toggle"
+                id="h2-participate-toggle"
+                class="hackathon-toggle"
+              />
+              <input
+                type="radio"
+                name="hackathon-2-toggle"
+                id="h2-submit-toggle"
+                class="hackathon-toggle"
+              />
+              <input
+                type="radio"
+                name="hackathon-2-toggle"
+                id="h2-close-toggle"
+                class="hackathon-toggle"
+                checked
+              />
+
+              <h3 class="hackathon-title">Future of FinTech Hack</h3>
+              <p class="hackathon-details">
+                Innovate in the financial technology space. Build a new payment
+                solution, a personal finance tool, or a blockchain application.
+                Top teams get a chance to pitch to VCs.
+              </p>
+              <div class="hackathon-buttons">
+                <label
+                  for="h2-participate-toggle"
+                  class="hackathon-button participate"
+                  >Participate</label
+                >
+                <label
+                  for="h2-submit-toggle"
+                  class="hackathon-button submission"
+                  >Submit Project</label
+                >
+              </div>
+
+              <!-- Participation Form for Hackathon 2 -->
+              <div class="hackathon-form-container participation-form">
+                <label
+                  for="h2-close-toggle"
+                  class="form-close-btn"
+                  title="Close"
+                  >×</label
+                >
+                <form class="hackathon-action-form">
+                  <h4 class="form-sub-title">
+                    Register for "Future of FinTech Hack"
+                  </h4>
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder=" " required />
+                    <label>Your Name</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" placeholder=" " required />
+                    <label>Your Email</label>
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      name="message"
+                      rows="4"
+                      placeholder=" "
+                    ></textarea>
+                    <label>Tell us why you want to participate</label>
+                  </div>
+                  <button type="submit" class="cta-button">Register</button>
+                </form>
+              </div>
+
+              <!-- Project Submission Link for Hackathon 2 -->
+              <div class="hackathon-form-container submission-form">
+                <label
+                  for="h2-close-toggle"
+                  class="form-close-btn"
+                  title="Close"
+                  >×</label
+                >
+                <form class="hackathon-action-form">
+                  <h4 class="form-sub-title">
+                    Submit Project for "Future of FinTech Hack"
+                  </h4>
+                  <div class="form-group">
+                    <input
+                      type="url"
+                      name="project-link"
+                      placeholder=" "
+                      required
+                    />
+                    <label>Project Link (GitHub, Demo, etc.)</label>
+                  </div>
+                  <button type="submit" class="cta-button">Submit Link</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Hackathon 3 -->
+            <div class="hackathon-card">
+              <!-- Toggles for showing/hiding forms -->
+              <input
+                type="radio"
+                name="hackathon-3-toggle"
+                id="h3-participate-toggle"
+                class="hackathon-toggle"
+              />
+              <input
+                type="radio"
+                name="hackathon-3-toggle"
+                id="h3-submit-toggle"
+                class="hackathon-toggle"
+              />
+              <input
+                type="radio"
+                name="hackathon-3-toggle"
+                id="h3-close-toggle"
+                class="hackathon-toggle"
+                checked
+              />
+
+              <h3 class="hackathon-title">Code & Create: Web Dev Battle</h3>
+              <p class="hackathon-details">
+                A 48-hour coding marathon for web developers. Showcase your
+                front-end and back-end skills by building a full-stack web
+                application from scratch.
+              </p>
+              <div class="hackathon-buttons">
+                <label
+                  for="h3-participate-toggle"
+                  class="hackathon-button participate"
+                  >Participate</label
+                >
+                <label
+                  for="h3-submit-toggle"
+                  class="hackathon-button submission"
+                  >Submit Project</label
+                >
+              </div>
+
+              <!-- Participation Form for Hackathon 3 -->
+              <div class="hackathon-form-container participation-form">
+                <label
+                  for="h3-close-toggle"
+                  class="form-close-btn"
+                  title="Close"
+                  >×</label
+                >
+                <form class="hackathon-action-form">
+                  <h4 class="form-sub-title">
+                    Register for "Code & Create: Web Dev Battle"
+                  </h4>
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder=" " required />
+                    <label>Your Name</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" placeholder=" " required />
+                    <label>Your Email</label>
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      name="message"
+                      rows="4"
+                      placeholder=" "
+                    ></textarea>
+                    <label>Tell us why you want to participate</label>
+                  </div>
+                  <button type="submit" class="cta-button">Register</button>
+                </form>
+              </div>
+
+              <!-- Project Submission Link for Hackathon 3 -->
+              <div class="hackathon-form-container submission-form">
+                <label
+                  for="h3-close-toggle"
+                  class="form-close-btn"
+                  title="Close"
+                  >×</label
+                >
+                <form class="hackathon-action-form">
+                  <h4 class="form-sub-title">
+                    Submit Project for "Code & Create: Web Dev Battle"
+                  </h4>
+                  <div class="form-group">
+                    <input
+                      type="url"
+                      name="project-link"
+                      placeholder=" "
+                      required
+                    />
+                    <label>Project Link (GitHub, Demo, etc.)</label>
+                  </div>
+                  <button type="submit" class="cta-button">Submit Link</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <!-- Column 1: Logo & About -->
+        <div class="footer-column">
+          <a href="index.html"
+            ><img src="logo.png" alt="STRIKE Logo" class="footer-logo-img"
+          /></a>
+          <p class="footer-about">
+            Bridging the gap between academia and industry with project-based
+            learning.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="hackathons.html">Hackathons</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Legal -->
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Follow Us -->
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <!-- Replace # with your actual social media links -->
+            <a
+              href="https://x.com/dushmanta404?t=JLxS1a13Z8nvXu2m30JFkA&s=09"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-square-x-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/dushmanta-khilari-83727035b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/dush404"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-square-github"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/d.u.s.h.4.0.4?igsh=YnU2MWh6emsxYmU3"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 STRIKE. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Script removed as functionality is now handled by CSS -->
+  </body>
+</html>
