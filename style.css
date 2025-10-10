@@ -118,7 +118,6 @@ header {
   display: block;
 }
 .brand-name {
-  font-family: ;
 }
 .hero-logo {
   height: 120px;
@@ -309,7 +308,6 @@ h1 {
   color: rgb(8, 171, 235);
   margin-bottom: 2rem;
   animation: slideUp 1s ease-out 0.2s both;
-  font-family: cursive;
 }
 
 /* Call to Action Button */
