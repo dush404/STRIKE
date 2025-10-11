@@ -6,12 +6,12 @@
 }
 
 :root {
-  --primary: #070778; /* Dark Blue */
-  --secondary: #f97316; /* Warm Orange */
-  --accent: #d946ef; /* Fuchsia */
+  --primary: #04045f; /* Dark Blue */
+  --secondary: #1e068a; /* Warm Orange */
+  --accent: #ed2b9f; /* Fuchsia */
   --dark: #1e1b4b; /* Deep Indigo */
   --light: #f8fafc; /* Light Gray */
-  --card-bg: #060353; /* Lighter Indigo for cards */
+  --card-bg: #04024a; /* Lighter Indigo for cards */
   --gradient: linear-gradient(
     135deg,
     var(--secondary) 0%,
@@ -104,6 +104,25 @@ header {
   border: 1px solid rgba(37, 99, 235, 0.5);
   border-radius: 50px;
   transition: padding 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: sweepShine 3s ease-in-out infinite;
+  z-index: -1; /* Place it behind the nav content */
+  transform: translateX(-150%) skewX(-30deg);
 }
 
 .nav-container {
@@ -133,6 +152,9 @@ header {
 .hero-logo {
   height: 120px;
   width: auto;
+  /* Add a subtle glow to make the logo pop against the busy background */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3))
+    drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
 }
 
 .nav-menu {
@@ -197,10 +219,31 @@ header {
 }
 
 .nav-button:hover {
-  transform: translateY(px);
+  transform: translateY(-2px);
   box-shadow: 0 0px 20px rgba(249, 115, 22, 0.5);
 }
 
+/* Reusable Glitter/Shine Effect */
+@keyframes glitter {
+  0% {
+    transform: translateX(-100%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-30deg);
+  }
+}
+
+@keyframes sweepShine {
+  0% {
+    transform: translateX(-150%) skewX(-30deg);
+  }
+  40% {
+    transform: translateX(350%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(350%) skewX(-30deg);
+  }
+}
 @keyframes moveGrid {
   0%,
   100% {
@@ -310,9 +353,15 @@ h1 {
 }
 
 .subtitle {
-  font-size: 1.25rem;
-  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #37c404, #08e6ff, #23becf, #eedd44);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   margin-bottom: 2rem;
+  filter: drop-shadow(2px 2px 4px rgb(4, 91, 162));
   animation: slideUp 1s ease-out 0.2s both;
 }
 
@@ -354,6 +403,24 @@ h1 {
   box-shadow: 0 0px 20px rgba(249, 115, 22, 0.5);
 }
 
+/* Adding glitter effect to buttons */
+.nav-button,
+.cta-button,
+.hackathon-button.participate,
+.course-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-button:hover::after,
+.cta-button:hover::after,
+.hackathon-button.participate:hover::after,
+.course-button:hover::after,
+.nav-button:active::after,
+.cta-button:active::after,
+.course-button:active::after {
+  animation: glitter 1s ease-in-out;
+}
 /* Features Section */
 
 .features {
@@ -485,20 +552,23 @@ h1 {
 
 .feature-expanded-content .form-close-btn {
   position: absolute;
-  top: 2.1rem;
+  top: 2.2rem;
   right: 2.5rem;
   font-size: 2.5rem;
-  color: #000000;
+  color: var(--light); /* Changed from black to light for visibility */
   cursor: pointer;
   line-height: 1;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: 0.5s;
   background: none;
   border: none;
   padding: 0;
 }
+.form-close-btn::click {
+  top: 0;
+}
 
 .feature-expanded-content .form-close-btn:hover {
-  color: var(--light);
+  color: var(--secondary);
 }
 
 /* Logic to show expanded content */
@@ -569,6 +639,7 @@ h1 {
   padding: 1.5rem;
   transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
 }
 
 .highlight-item::before {
@@ -587,6 +658,40 @@ h1 {
   background: rgba(255, 255, 255, 0.1);
   transform: translateX(10px);
   padding-left: 3rem;
+}
+
+.feature-card-wrapper::after,
+.highlight-item::after,
+.team-member-card::after,
+.hackathon-card::after,
+.course-card::after,
+.roadmap-step-content::after,
+.feedback-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-150%) skewX(-30deg);
+  transition: transform 0.75s;
+}
+
+.feature-card-wrapper:hover::after,
+.highlight-item:hover::after,
+.team-member-card:hover::after,
+.hackathon-card:hover::after,
+.course-card:hover::after,
+.roadmap-step-content:hover::after,
+.feedback-item:hover::after {
+  transform: translateX(250%) skewX(-30deg);
+  transition: transform 0.75s;
 }
 
 .highlight-item:hover::before {
@@ -675,6 +780,8 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .team-member-card:hover {
@@ -783,7 +890,7 @@ h1 {
   left: 0.75rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--light); /* Changed from primary blue to light for visibility */
   background-color: var(--card-bg);
   padding: 0 0.25rem;
 }
@@ -826,7 +933,7 @@ h1 {
   left: 0.75rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--light); /* Changed from primary blue to light for visibility */
   background-color: var(--card-bg);
   padding: 0 0.25rem;
   transform: translateY(-50%);
@@ -853,7 +960,7 @@ h1 {
   left: 3rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--light); /* Changed from primary blue to light for visibility */
   background-color: var(--card-bg);
   padding: 0 0.25rem;
   transform: translateY(-50%);
@@ -940,6 +1047,7 @@ h1 {
   border-left: 5px solid var(--primary);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  overflow: hidden;
 }
 
 .hackathon-card:hover {
@@ -1280,8 +1388,10 @@ h1 {
 /* CSS Logic to show/hide forms */
 #login-mode:checked ~ .auth-tabs .login-tab,
 #signup-mode:checked ~ .auth-tabs .signup-tab {
-  background: var(--gradient);
-  color: var(--primary);
+  background: var(--gradient); /* Using a brighter gradient */
+  color: var(
+    --dark
+  ); /* Changed from primary blue to dark for better contrast */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1364,6 +1474,8 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-left: 4px solid var(--primary);
+  position: relative;
+  overflow: hidden;
 }
 
 .roadmap-step-content:hover {
@@ -1388,10 +1500,20 @@ h1 {
   color: #cbd5e1;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .roadmap-steps {
     padding-left: 0;
     border-left: 4px solid var(--card-bg);
+    margin-left: 20px; /* Add some margin to not stick to the edge */
+  }
+  .roadmap-phase {
+    margin-left: 0;
+  }
+  .roadmap-step-number {
+    left: -22px; /* Position it over the new border-left */
+  }
+  .roadmap-step-content {
+    margin-left: 20px;
   }
 }
 
@@ -1603,6 +1725,7 @@ footer {
   min-width: 300px;
   scroll-snap-align: start;
   transition: transform 0.3s ease;
+  position: relative;
   text-align: center;
 }
 
