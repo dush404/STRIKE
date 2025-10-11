@@ -813,7 +813,8 @@ h1 {
 }
 
 .team-member-role {
-  color: var(--secondary);
+  color: var(--accent);
+
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
