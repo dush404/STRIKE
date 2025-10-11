@@ -54,6 +54,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  /* padding-top: 0px; // This will be handled differently for mobile */
   padding-top: 0px;
 }
 
@@ -146,6 +147,11 @@ header {
   width: auto;
   text-decoration: none;
   display: block;
+}
+@media (max-width: 767px) {
+  .nav-logo {
+    height: 35px; /* Smaller logo on mobile */
+  }
 }
 .brand-name {
 }
@@ -1658,18 +1664,27 @@ footer {
 /* Mobile Styles (below 768px) */
 /* Adjust body padding for mobile if navbar height changes */
 @media (max-width: 767px) {
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  header {
+    padding-top: 80px; /* Push header content below the navbar */
+  }
   .navbar {
     position: absolute;
-    padding: 0.5rem 0;
-    top: 0;
-    width: 100%;
-    border-radius: 50px;
+    padding: 0.25rem 0; /* Reduced padding to decrease height */
+    top: 10px; /* Give some space from the top */
+    left: 10px;
+    right: 10px;
+    width: auto; /* Let it be defined by left/right */
+    border-radius: 30px;
     border: 2px solid white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateX(0); /* Reset desktop transform */
   }
 
   html {
-    padding-top: 60px; /* Smaller padding for mobile navbar */
+    padding-top: 0; /* Remove this as we are padding the header directly */
   }
 
   .nav-container {
@@ -1691,6 +1706,10 @@ footer {
     gap: 0.5rem 1.5rem;
     flex-wrap: wrap; /* Allow nav items to wrap to the next line */
     justify-content: center; /* Center the items when they wrap */
+  }
+
+  .subtitle {
+    font-size: 1.25rem; /* Smaller font size for mobile */
   }
 }
 /* icons deply */
