@@ -700,7 +700,7 @@ h1 {
 }
 
 .team-member-role {
-  color: var(--primary);
+  color: var(--secondary);
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
