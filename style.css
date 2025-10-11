@@ -1711,6 +1711,22 @@ footer {
   .subtitle {
     font-size: 1.25rem; /* Smaller font size for mobile */
   }
+
+  .section-title {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  /* Add top padding to sections to clear the absolute navbar */
+  .features,
+  .highlights,
+  .about-section,
+  .courses-section,
+  .loves-from-you,
+  .contact-section,
+  .auth-section,
+  .hackathons-section {
+    padding-top: 100px;
+  }
 }
 /* icons deply */
 
