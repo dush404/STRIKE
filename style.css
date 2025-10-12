@@ -6,17 +6,21 @@
 }
 
 :root {
-  --primary: #04045f; /* Dark Blue */
-  --secondary: #1e068a; /* Warm Orange */
-  --accent: #ed2b9f; /* Fuchsia */
-  --dark: #1e1b4b; /* Deep Indigo */
+  --primary: #140356; /* Dark Blue */
+  --secondary: #058115; /* Warm Orange */
+  --accent: #059213; /* Fuchsia */
+  --dark: #100d41; /* Deep Indigo */
   --light: #f8fafc; /* Light Gray */
-  --card-bg: #04024a; /* Lighter Indigo for cards */
+  --card-bg: #0d0444; /* Lighter Indigo for cards */
+  --green: #07df12;
+  --orange: #f45d06;
+  --sky: #06cbd1;
+
   --gradient: linear-gradient(
     135deg,
-    var(--secondary) 0%,
-    var(--accent) 50%,
-    var(--primary) 100%
+    var(--primary) 0%,
+    /* var(--orange) 25%, */ var(--accent) 50%,
+    /* var(--green) 75%, */ var(--primary) 100%
   );
   --gradient2: linear-gradient(
     135deg,
@@ -36,14 +40,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
-  color: #94a3b8;
-  background-color: var(--dark);
-  background-image: linear-gradient(160deg, #0f172a 0%, #1e293b 100%),
-    radial-gradient(
-      circle at top left,
-      rgba(20, 184, 166, 0.2),
-      /* --primary with alpha */ transparent 40%
-    ),
+    color: #94a3b8;
+    background-color: #000000;
     radial-gradient(
       circle at bottom right,
       rgba(249, 115, 22, 0.2),
@@ -51,7 +49,7 @@ body {
     );
   overflow-x: hidden;
 }
-
+    
 html {
   scroll-behavior: smooth;
   /* padding-top: 0px; // This will be handled differently for mobile */
@@ -202,7 +200,8 @@ header {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  border-radius: 1px;
+  height: 4px;
   background: var(--gradient);
   transform: scaleX(0);
   transform-origin: center;
@@ -226,7 +225,7 @@ header {
 
 .nav-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0px 20px rgba(249, 115, 22, 0.5);
+  box-shadow: 0 0px 20px rgba(5, 146, 19, 0.5);
 }
 
 /* Reusable Glitter/Shine Effect */
@@ -406,7 +405,29 @@ h1 {
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0px 20px rgba(249, 115, 22, 0.5);
+  box-shadow: 0 0px 20px rgba(5, 146, 19, 0.5);
+}
+
+.cta-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--light);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #475569;
+  transition: all 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
 }
 
 /* Adding glitter effect to buttons */
@@ -431,7 +452,7 @@ h1 {
 
 .features {
   padding: 4rem 1.5rem;
-  background: rgba(11, 18, 33, 0.7);
+  background: #000000;
 }
 
 .section-title {
@@ -441,6 +462,14 @@ h1 {
   font-weight: 800;
   margin-bottom: 3rem;
   color: var(--light);
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .features-grid {
@@ -621,8 +650,8 @@ h1 {
 
 .highlights {
   padding: 4rem 1.5rem;
-
-  background-color: rgba(11, 18, 33, 0.7);
+  
+  background-color: #000000;
   backdrop-filter: blur(5px);
   color: white;
 }
@@ -740,7 +769,7 @@ h1 {
 
 .about-section {
   padding: 4rem 1.5rem;
-  background: var(--dark);
+  background: #000000;
 }
 
 .about-content {
@@ -834,7 +863,7 @@ h1 {
 
 .contact-section {
   padding: 4rem 1.5rem;
-  background: var(--dark);
+  background: #000000;
 }
 
 .contact-content {
@@ -933,7 +962,7 @@ h1 {
 .form-group select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 0 3px rgba(5, 146, 19, 0.2);
 }
 .form-group .select-label {
   top: 0;
@@ -1028,7 +1057,7 @@ h1 {
 
 .hackathons-section {
   padding: 4rem 1.5rem;
-  background: var(--dark);
+  background: #000000;
 }
 
 .hackathons-content {
@@ -1051,7 +1080,7 @@ h1 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  border-left: 5px solid var(--primary);
+  border-left: 5px solid var(--orange);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -1065,7 +1094,7 @@ h1 {
 .hackathon-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--light);
+  color: var(--accent);
   margin-bottom: 0.75rem;
 }
 
@@ -1074,6 +1103,19 @@ h1 {
   line-height: 1.7;
   margin-bottom: 1.5rem;
   flex-grow: 1;
+}
+.hackathon-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.meta-item {
+  font-size: 0.9rem;
+  color: #cbd5e1;
 }
 
 .hackathon-buttons {
@@ -1104,7 +1146,7 @@ h1 {
 
 .hackathon-button.participate:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 20px rgba(5, 146, 19, 0.3);
 }
 
 .hackathon-button.submission {
@@ -1157,7 +1199,7 @@ h1 {
 #h1-submit-toggle:checked ~ .submission-form,
 #h2-submit-toggle:checked ~ .submission-form,
 #h3-submit-toggle:checked ~ .submission-form {
-  max-height: 600px;
+  max-height: 850px;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   margin-top: 1.5rem;
@@ -1210,8 +1252,9 @@ h1 {
 /* Courses page */
 
 .courses-section {
+  border-radius: 50px 50px 0px 0px;
   padding: 4rem 1.5rem;
-  background: var(--dark);
+  background: #000000;
 }
 
 .courses-content {
@@ -1238,7 +1281,7 @@ h1 {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 4px solid var(--accent);
+  border-top: 4px solid var(--orange);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1272,7 +1315,7 @@ h1 {
 .course-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--light);
+  color: var(--accent);
   margin-bottom: 0.5rem;
 }
 .course-price {
@@ -1280,14 +1323,14 @@ h1 {
   font-weight: 700;
   color: var(--light);
   margin-bottom: 0.25rem;
-  background: var(--gradient);
+  background: var(--light);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .course-duration {
-  color: #94a3b8;
+  color: var(--green);
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
@@ -1314,14 +1357,392 @@ h1 {
 
 .course-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 10px 20px rgba(5, 146, 19, 0.3);
+}
+
+/* Free Courses Section */
+.free-courses-section {
+  padding: 4rem 1.5rem;
+  background: #000000;
+}
+
+.free-course-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.free-course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.free-course-platform {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff0000; /* YouTube Red */
+  margin-bottom: 1rem;
+}
+
+.free-course-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--light);
+  margin-bottom: 0.25rem;
+  flex-grow: 1; /* Allows title to take up space */
+}
+
+.free-course-creator {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.free-course-button {
+  display: block;
+  text-align: center;
+  background: transparent;
+  color: var(--light);
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #475569;
+  transition: all 0.3s ease;
+}
+
+.free-course-button:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: white;
+}
+
+/* Add top padding to main content to avoid being hidden by fixed navbar */
+main {
+  padding-top: 100px;
+}
+
+/* Class Player Page */
+.player-section {
+  padding: 4rem 1.5rem;
+  background: #000000;
+}
+
+.player-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.video-player-wrapper {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-embed-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-info {
+  padding: 1.5rem 0.5rem 0.5rem;
+}
+
+.video-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--light);
+  margin-bottom: 1rem;
+}
+
+.video-description {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.video-playlist {
+  padding: 1.5rem 0.5rem 0.5rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playlist-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--light);
+  margin-bottom: 1rem;
+}
+
+.playlist-items {
+  list-style: none;
+  max-height: 400px; /* Adjust as needed */
+  overflow-y: auto;
+  padding-right: 0.5rem; /* For scrollbar spacing */
+}
+
+.playlist-item {
+  margin-bottom: 0.5rem;
+}
+
+.playlist-item a {
+  display: block;
+  padding: 0.75rem 1rem;
+  background-color: var(--dark);
+  color: #cbd5e1;
+  text-decoration: none;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.playlist-item a:hover {
+  background-color: #293548;
+  color: var(--light);
+}
+
+.playlist-item.active a {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  border-left-color: var(--accent);
+}
+
+/* Scrollbar styling for playlist */
+.playlist-items::-webkit-scrollbar {
+  width: 6px;
+}
+.playlist-items::-webkit-scrollbar-track {
+  background: var(--dark);
+  border-radius: 3px;
+}
+.playlist-items::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+.playlist-items::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+.ai-assistant-panel {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 85vh; /* Fixed height for the panel */
+  overflow: hidden; /* Prevent content from spilling out */
+}
+
+.ai-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-header i {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.ai-header h3 {
+  font-size: 1.25rem;
+  color: var(--light);
+  font-weight: 700;
+}
+
+.ai-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.ai-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--dark);
+  color: #cbd5e1;
+  border: 1px solid #475569;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ai-button:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.ai-chat-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem 1rem;
+  overflow: hidden;
+}
+
+.ai-chat-display {
+  flex-grow: 1;
+  background-color: var(--dark);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+
+.ai-message {
+  background-color: #293548;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: #e2e8f0;
+  max-width: 90%;
+}
+
+.ai-chat-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ai-chat-input-wrapper label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #cbd5e1;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.ai-chat-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ai-chat-input {
+  width: 100%;
+  padding: 0.8rem 3.5rem 0.8rem 1rem;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--light);
+  background-color: var(--dark);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-chat-input:focus + label,
+.ai-chat-input:not(:placeholder-shown) + label {
+  top: 0;
+  left: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--light);
+  background-color: var(--card-bg);
+  padding: 0 0.25rem;
+  transform: translateY(-50%);
+}
+
+.ai-chat-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(5, 146, 19, 0.2);
+}
+
+.ai-send-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.ai-qa-section {
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-qa-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--light);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ai-qa-list {
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.ai-qa-list li {
+  background-color: var(--dark);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ai-qa-list li:hover {
+  background-color: #293548;
+}
+
+.ai-send-btn:hover {
+  background: var(--accent);
 }
 
 /* Sign In / Auth Page */
 
 .auth-section {
   padding: 6rem 1.5rem;
-  background: var(--dark);
+  background: #000000;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1384,7 +1805,7 @@ h1 {
   margin-top: -1rem;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
-  color: var(--primary);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -1399,7 +1820,7 @@ h1 {
   color: var(
     --dark
   ); /* Changed from primary blue to dark for better contrast */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(5, 146, 19, 0.2);
 }
 
 #login-mode:checked ~ .auth-forms .signup-form,
@@ -1462,7 +1883,7 @@ h1 {
   top: 0;
   width: 40px;
   height: 40px;
-  background: var(--gradient);
+  background: var(--orange);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -1480,7 +1901,7 @@ h1 {
   text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 4px solid var(--primary);
+  border-left: 4px solid var(--orange);
   position: relative;
   overflow: hidden;
 }
@@ -1522,13 +1943,24 @@ h1 {
   .roadmap-step-content {
     margin-left: 20px;
   }
+  .player-container {
+    grid-template-columns: 1fr;
+  }
+  .ai-assistant-panel {
+    height: auto; /* Allow height to adjust on mobile */
+  }
+}
+
+/* Technology Roadmaps Section on Roadmap Page */
+.tech-roadmaps-section {
+  padding: 4rem 1.5rem;
 }
 
 /* Footer */
 
 footer {
   /* Using a semi-transparent background to show the body gradient */
-  background-color: rgba(11, 18, 33, 0.7);
+  background-color: #000000;
   padding: 4rem 1.5rem 2rem;
   color: #94a3b8;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1717,16 +2149,13 @@ footer {
     font-size: 2rem; /* Smaller font size for mobile */
   }
 
-  /* Add top padding to sections to clear the absolute navbar */
-  .features,
-  .highlights,
-  .about-section,
-  .courses-section,
-  .loves-from-you,
-  .contact-section,
-  .auth-section,
-  .hackathons-section {
-    padding-top: 100px;
+  main {
+    padding-top: 130px; /* More padding on mobile due to wrapped nav */
+  }
+  .auth-tabs,
+  .section-header {
+    /* Removed padding-top from here as it's handled by the parent section */
+    padding-top: 0;
   }
 }
 /* icons deply */
@@ -1739,7 +2168,7 @@ footer {
 
 .loves-from-you {
   padding: 4rem 1.5rem;
-  background: rgba(11, 18, 33, 0.7);
+  background: #000000;
   color: white;
 }
 

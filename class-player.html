@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Player - STRIKE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.png" type="image/png" />
+    <!-- link-for-icon-use -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html"
+            ><img src="logo.png" alt="STRIKE Logo" class="nav-logo"
+          /></a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="courses.html" class="nav-link">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="hackathons.html" class="nav-link">Hackathons</a>
+          </li>
+          <li class="nav-item">
+            <a href="roadmap.html" class="nav-link">Roadmap</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a href="signin.html" class="nav-button">Sign In</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Class Player Section -->
+    <main>
+      <section class="player-section">
+        <div class="player-container">
+          <!-- Left Column: Video Player -->
+          <div class="video-player-wrapper">
+            <div class="video-embed-container">
+              <iframe
+                src="https://www.youtube.com/embed/E0a_iA5A-5Y"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-info">
+              <h2 class="video-title">
+                JavaScript Full Course (2024) by Coder Army
+              </h2>
+              <p class="video-description">
+                Welcome to the ultimate JavaScript learning experience. This
+                video covers everything from the basics to advanced concepts.
+                Use the AI assistant on the right to enhance your learning!
+              </p>
+            </div>
+            <!-- Video Playlist -->
+            <div class="video-playlist">
+              <h3 class="playlist-title">Course Playlist</h3>
+              <ul class="playlist-items">
+                <li class="playlist-item active">
+                  <a href="#">Vid 1: Introduction to JavaScript</a>
+                </li>
+                <li class="playlist-item">
+                  <a href="#">Vid 2: Variables and Data Types</a>
+                </li>
+                <li class="playlist-item"><a href="#">Vid 3: Operators</a></li>
+                <li class="playlist-item">
+                  <a href="#">Vid 4: Control Flow</a>
+                </li>
+                <!-- Add more videos up to 20 -->
+                <li class="playlist-item"><a href="#">Vid 5: Functions</a></li>
+                <li class="playlist-item"><a href="#">Vid 6: Scope</a></li>
+                <li class="playlist-item"><a href="#">Vid 7: Arrays</a></li>
+                <li class="playlist-item"><a href="#">Vid 8: Objects</a></li>
+                <li class="playlist-item"><a href="#">Vid 9: Loops</a></li>
+                <li class="playlist-item">
+                  <a href="#">Vid 10: DOM Manipulation</a>
+                </li>
+                <li class="playlist-item"><a href="#">Vid 11: Events</a></li>
+                <li class="playlist-item">
+                  <a href="#">Vid 12: ES6+ Features</a>
+                </li>
+                <li class="playlist-item">
+                  <a href="#">Vid 13: Asynchronous JS</a>
+                </li>
+                <li class="playlist-item"><a href="#">Vid 14: Promises</a></li>
+                <li class="playlist-item">
+                  <a href="#">Vid 15: Async/Await</a>
+                </li>
+                <li class="playlist-item">
+                  <a href="#">Vid 16: APIs and Fetch</a>
+                </li>
+                <li class="playlist-item">
+                  <a href="#">Vid 17: Error Handling</a>
+                </li>
+                <li class="playlist-item"><a href="#">Vid 18: Modules</a></li>
+                <li class="playlist-item">
+                  <a href="#">Vid 19: Tooling & Build</a>
+                </li>
+                <li class="playlist-item">
+                  <a href="#">Vid 20: Final Project</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Column: AI Assistant -->
+          <aside class="ai-assistant-panel">
+            <div class="ai-header">
+              <i class="fa-solid fa-robot"></i>
+              <h3>AI Assistant</h3>
+            </div>
+            <div class="ai-actions">
+              <button class="ai-button">
+                <i class="fa-solid fa-file-lines"></i> Summarize Video
+              </button>
+              <button class="ai-button">
+                <i class="fa-solid fa-pen-to-square"></i> Generate Notes
+              </button>
+            </div>
+            <div class="ai-chat-area">
+              <div class="ai-chat-display">
+                <div class="ai-message">
+                  <p>
+                    Hello! I'm your AI assistant. Ask me anything about this
+                    video.
+                  </p>
+                </div>
+              </div>
+              <div class="ai-chat-input-wrapper">
+                <input
+                  type="text"
+                  class="ai-chat-input"
+                  placeholder="Ask for anything..."
+                />
+                <button class="ai-send-btn" aria-label="Send message">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+            <!-- Course Q&A Section -->
+            <div class="ai-qa-section">
+              <h4 class="ai-qa-title">
+                <i class="fa-solid fa-circle-question"></i> Quick Questions
+              </h4>
+              <ul class="ai-qa-list">
+                <li>What is a variable in JavaScript?</li>
+                <li>
+                  Explain the difference between `let`, `const`, and `var`.
+                </li>
+                <li>What is the DOM?</li>
+                <li>How does an `async` function work?</li>
+                <li>What is "event bubbling"?</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <a href="index.html"
+            ><img src="logo.png" alt="STRIKE Logo" class="footer-logo-img"
+          /></a>
+          <p class="footer-about">
+            Bridging the gap between academia and industry with project-based
+            learning.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="hackathons.html">Hackathons</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a
+              href="https://x.com/dushmanta404?t=JLxS1a13Z8nvXu2m30JFkA&s=09"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-square-x-twitter"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/dushmanta-khilari-83727035b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/dush404"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-square-github"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/d.u.s.h.4.0.4?igsh=YnU2MWh6emsxYmU3"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 STRIKE. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
