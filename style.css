@@ -9,9 +9,9 @@
   --primary: #140356; /* Dark Blue */
   --secondary: #058115; /* Warm Orange */
   --accent: #059213; /* Fuchsia */
-  --dark: #100d41; /* Deep Indigo */
+  --dark: #a9a7c91d; /* Deep Indigo */
   --light: #f8fafc; /* Light Gray */
-  --card-bg: #0d0444; /* Lighter Indigo for cards */
+  --card-bg: #817d9f33; /* Lighter Indigo for cards */
   --green: #07df12;
   --orange: #f45d06;
   --sky: #06cbd1;
@@ -1449,7 +1449,7 @@ main {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr; /* Reverted to original ratio, height is the focus */
   gap: 2rem;
 }
 
@@ -1458,6 +1458,7 @@ main {
   backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 1rem;
+
   border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
 }
 
@@ -1563,7 +1564,7 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
   display: flex;
   flex-direction: column;
-  height: 85vh; /* Fixed height for the panel */
+  height: 90vh; /* Increased panel height */
   overflow: hidden; /* Prevent content from spilling out */
 }
 
@@ -1628,7 +1629,8 @@ main {
   border-radius: 8px;
   padding: 1rem;
   overflow-y: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* Reduced margin to give more space */
+
 }
 
 .ai-message {
