@@ -482,13 +482,14 @@ h1 {
 /* Feature Cards */
 
 .feature-card-wrapper {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
   display: flex;
   flex-direction: column;
 }
@@ -669,7 +670,7 @@ h1 {
 .highlight-item {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
   border-radius: 15px;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -808,13 +809,14 @@ h1 {
 }
 
 .team-member-card {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
   position: relative;
   overflow: hidden;
 }
@@ -880,7 +882,8 @@ h1 {
 }
 
 .contact-form {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -927,7 +930,7 @@ h1 {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--light); /* Changed from primary blue to light for visibility */
-  background-color: var(--card-bg);
+  background-color: transparent; /* Adjusted for new background */
   padding: 0 0.25rem;
 }
 .form-group select {
@@ -970,7 +973,7 @@ h1 {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--light); /* Changed from primary blue to light for visibility */
-  background-color: var(--card-bg);
+  background-color: transparent; /* Adjusted for new background */
   padding: 0 0.25rem;
   transform: translateY(-50%);
 }
@@ -1074,14 +1077,15 @@ h1 {
 }
 
 .hackathon-card {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  border-left: 5px solid var(--orange);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
   position: relative;
   overflow: hidden;
 }
@@ -1089,6 +1093,7 @@ h1 {
 .hackathon-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  border-color: var(--orange);
 }
 
 .hackathon-title {
@@ -1243,9 +1248,9 @@ h1 {
 
 .hackathon-action-form .form-group input:focus + label,
 .hackathon-action-form .form-group input:not(:placeholder-shown) + label,
-.hackathon-action-form .form-group textarea:focus + label,
+.hackathon-action-form .form-group textarea:focus + label, /* Corrected selector */
 .hackathon-action-form .form-group textarea:not(:placeholder-shown) + label {
-  background-color: var(--card-bg);
+  background-color: transparent; /* Adjusted for new background */
   padding: 0 0.25rem;
 }
 
@@ -1272,7 +1277,8 @@ h1 {
 }
 
 .course-card {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -1280,14 +1286,14 @@ h1 {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 4px solid var(--orange);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .course-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  border-color: var(--orange);
 }
 
 .course-badge {
@@ -1367,7 +1373,8 @@ h1 {
 }
 
 .free-course-card {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -1375,7 +1382,7 @@ h1 {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1447,10 +1454,11 @@ main {
 }
 
 .video-player-wrapper {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
 }
 
 .video-embed-container {
@@ -1549,9 +1557,10 @@ main {
 }
 
 .ai-assistant-panel {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Made border more visible */
   display: flex;
   flex-direction: column;
   height: 85vh; /* Fixed height for the panel */
@@ -1671,7 +1680,7 @@ main {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--light);
-  background-color: var(--card-bg);
+  background-color: transparent; /* Adjusted for new background */
   padding: 0 0.25rem;
   transform: translateY(-50%);
 }
@@ -1895,7 +1904,8 @@ main {
 }
 
 .roadmap-step-content {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 1.5rem;
   text-align: left;
@@ -1909,7 +1919,7 @@ main {
 .roadmap-step-content:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-  border-left-color: var(--secondary);
+  border-color: var(--secondary);
 }
 
 /* Overriding reused team-member classes for roadmap context */
@@ -2183,7 +2193,8 @@ footer {
 }
 
 .feedback-item {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
