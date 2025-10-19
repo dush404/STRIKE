@@ -6,9 +6,9 @@
 }
 
 :root {
-  --primary: #140356; /* Dark Blue */
+  --primary: #000000; /* Dark Blue */
   --secondary: #058115; /* Warm Orange */
-  --accent: #059213; /* Fuchsia */
+  --accent: #b7b4b4ad; /* Fuchsia */
   --dark: #a9a7c91d; /* Deep Indigo */
   --light: #f8fafc; /* Light Gray */
   --card-bg: #817d9f33; /* Lighter Indigo for cards */
@@ -40,16 +40,16 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
-    color: #94a3b8;
-    background-color: #000000;
-    radial-gradient(
-      circle at bottom right,
-      rgba(249, 115, 22, 0.2),
-      /* --secondary with alpha */ transparent 50%
-    );
+  color: #94a3b8;
+  background-color: #000000;
+  background-image: radial-gradient(
+    circle at bottom right,
+    rgba(249, 115, 22, 0.2),
+    /* --secondary with alpha */ transparent 50%
+  );
   overflow-x: hidden;
 }
-    
+
 html {
   scroll-behavior: smooth;
   /* padding-top: 0px; // This will be handled differently for mobile */
@@ -75,12 +75,16 @@ header {
   padding: 2rem 1.5rem;
   z-index: 0;
   background-image: linear-gradient(
-      rgba(37, 99, 235, 0.15) 1px,
+      rgba(234, 237, 243, 0.15) 1px,
       transparent 1px
     ),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.15) 1px, transparent 1px),
-    radial-gradient(circle at 25% 25%, rgba(249, 115, 22, 0.1), transparent 30%),
-    radial-gradient(circle at 75% 75%, rgba(217, 70, 239, 0.1), transparent 30%);
+    linear-gradient(90deg, rgba(212, 218, 231, 0.15) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(223, 104, 19, 0.1), transparent 30%),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(236, 229, 237, 0.1),
+      transparent 30%
+    );
   background-size: 40px 40px, 40px 40px, 400px 400px, 400px 400px;
   background-position: -1px -1px, -1px -1px, 0 0, 0 0;
   animation: moveGrid 10s linear infinite;
@@ -97,10 +101,10 @@ header {
   width: 95%;
   padding: 0.75rem 0;
   z-index: 100;
-  background: rgba(30, 27, 75, 0.5); /* --dark with alpha */
+  background: rgba(85, 85, 85, 0.316); /* --dark with alpha */
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(37, 99, 235, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50px;
   transition: padding 0.3s ease, background-color 0.3s ease;
   overflow: hidden;
@@ -272,7 +276,7 @@ header::after {
   line-height: 1.5;
   white-space: pre-wrap;
   word-break: break-all;
-  background: var(--gradient3);
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -307,7 +311,7 @@ header::after {
 
 .premium-badge {
   display: inline-block;
-  background: var(--gradient2);
+  background: var(--gradient);
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 50px;
@@ -360,13 +364,13 @@ h1 {
 .subtitle {
   font-size: 40px;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #37c404, #08e6ff, #23becf, #eedd44);
+  background: black;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
   margin-bottom: 2rem;
-  filter: drop-shadow(2px 2px 4px rgb(4, 91, 162));
+  filter: drop-shadow(2px 2px 4px rgb(255, 255, 255));
   animation: slideUp 1s ease-out 0.2s both;
 }
 
@@ -651,7 +655,7 @@ h1 {
 
 .highlights {
   padding: 4rem 1.5rem;
-  
+
   background-color: #000000;
   backdrop-filter: blur(5px);
   color: white;
@@ -1530,7 +1534,7 @@ main {
 }
 
 .playlist-item a:hover {
-  background-color: #293548;
+  background-color: #4a4a4a;
   color: var(--light);
 }
 
@@ -1550,11 +1554,11 @@ main {
   border-radius: 3px;
 }
 .playlist-items::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: #575757;
   border-radius: 3px;
 }
 .playlist-items::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #5c5c5c;
 }
 
 .ai-assistant-panel {
@@ -1630,7 +1634,6 @@ main {
   padding: 1rem;
   overflow-y: auto;
   margin-bottom: 1rem; /* Reduced margin to give more space */
-
 }
 
 .ai-message {
@@ -2023,7 +2026,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: var(--primary);
+  color: white;
   padding-left: 5px;
 }
 
@@ -2039,7 +2042,7 @@ footer {
 }
 
 .social-icons a:hover {
-  color: var(--secondary);
+  color: #94a3b8;
   transform: translateY(-3px);
 }
 
